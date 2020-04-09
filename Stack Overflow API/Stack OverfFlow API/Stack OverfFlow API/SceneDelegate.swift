@@ -16,15 +16,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
        
-    if let windowScene = scene as? UIWindowScene {
-        let window = UIWindow(windowScene: <#T##UIWindowScene#>)
-        
-        
-        let rootViewController = QuestionsTableViewController()
-            window.rootViewController = UINavigationController(rootViewController: rootViewController)
-        
-            self.window = window
-            window.makeKeyAndVisible()
+        if let windowScene = scene as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            
+            let rootViewController = QuestionsTableViewController()
+                window.rootViewController = UINavigationController(rootViewController: rootViewController)
+            
+                self.window = window
+                window.makeKeyAndVisible()
         }
     }
 
