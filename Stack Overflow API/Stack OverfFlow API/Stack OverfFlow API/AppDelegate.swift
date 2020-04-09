@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let rootViewController = QuestionsTableViewController()
         self.window?.rootViewController = UINavigationController(rootViewController: rootViewController)
+        
         return true
     }
 
