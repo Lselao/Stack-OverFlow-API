@@ -1,9 +1,9 @@
 //
 //  SceneDelegate.swift
-//  Stack OverfFlow API
+//  StackOverflowApp
 //
-//  Created by lebose on 2020/04/08.
-//  Copyright © 2020 lebose. All rights reserved.
+//  Created by Kudzaiishe Mhou on 2020/04/07.
+//  Copyright © 2020 Kudzaiishe Mhou. All rights reserved.
 //
 
 import UIKit
@@ -11,19 +11,19 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-       
-        if let windowScene = scene as? UIWindowScene { 
+        if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             
-            let rootViewController = QuestionsTableViewController()
-                window.rootViewController = UINavigationController(rootViewController: rootViewController)
+            let rootVC = QuestionsViewController()
+            let nav = UINavigationController(rootViewController: rootVC)
+            nav.view.backgroundColor = UIColor.blueColor()
+            window.rootViewController = nav
             
-                self.window = window
-                window.makeKeyAndVisible()
+            self.window = window
+            window.makeKeyAndVisible()
         }
     }
 

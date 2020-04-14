@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Stack OverfFlow API
+//  StackOverflowApp
 //
-//  Created by lebose on 2020/04/08.
-//  Copyright © 2020 lebose. All rights reserved.
+//  Created by Kudzaiishe Mhou on 2020/04/07.
+//  Copyright © 2020 Kudzaiishe Mhou. All rights reserved.
 //
 
 import UIKit
@@ -11,21 +11,20 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-//    overriding the default main story board
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        
-        let rootViewController = QuestionsTableViewController()
-        self.window?.rootViewController = UINavigationController(rootViewController: rootViewController)
-        
+
+        let rootVC = QuestionsViewController()
+        let nav = UINavigationController(rootViewController: rootVC)
+        nav.view.backgroundColor = UIColor.blueColor()
+        self.window?.rootViewController = nav
+
         return true
     }
-
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

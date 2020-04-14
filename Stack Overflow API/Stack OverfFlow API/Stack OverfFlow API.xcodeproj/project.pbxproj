@@ -20,6 +20,13 @@
 		A10DFF21243E0C6200359771 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10DFF20243E0C6200359771 /* Owner.swift */; };
 		A10DFF23243E0C8A00359771 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10DFF22243E0C8A00359771 /* Item.swift */; };
 		A10DFF25243E0CA800359771 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10DFF24243E0CA800359771 /* Question.swift */; };
+		A10DFF27243F2D3400359771 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10DFF26243F2D3400359771 /* Service.swift */; };
+		A19A2A6A2444DB7B00B2AA77 /* QuestionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19A2A692444DB7B00B2AA77 /* QuestionInfo.swift */; };
+		A19A2A6C2444DD8000B2AA77 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19A2A6B2444DD8000B2AA77 /* ViewModel.swift */; };
+		A19A2A6E244570EF00B2AA77 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19A2A6D244570EF00B2AA77 /* QuestionsViewController.swift */; };
+		A19A2A702445715B00B2AA77 /* SearchBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19A2A6F2445715B00B2AA77 /* SearchBackgroundViewController.swift */; };
+		A19A2A722445720900B2AA77 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19A2A712445720900B2AA77 /* SearchTableViewCell.swift */; };
+		A19A2A75244572C800B2AA77 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19A2A74244572C800B2AA77 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +66,13 @@
 		A10DFF20243E0C6200359771 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		A10DFF22243E0C8A00359771 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		A10DFF24243E0CA800359771 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		A10DFF26243F2D3400359771 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		A19A2A692444DB7B00B2AA77 /* QuestionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionInfo.swift; sourceTree = "<group>"; };
+		A19A2A6B2444DD8000B2AA77 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		A19A2A6D244570EF00B2AA77 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		A19A2A6F2445715B00B2AA77 /* SearchBackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBackgroundViewController.swift; sourceTree = "<group>"; };
+		A19A2A712445720900B2AA77 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		A19A2A74244572C800B2AA77 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,28 +156,25 @@
 		A103852D243DFC44008F6064 /* Questions */ = {
 			isa = PBXGroup;
 			children = (
-				A1038531243E00BB008F6064 /* Services */,
-				A1038530243E00AF008F6064 /* Model */,
-				A103852F243E009F008F6064 /* ModelViews */,
-				A103852E243E0093008F6064 /* Views */,
+				A19A2A73244572AD00B2AA77 /* Common */,
+				A103852F243E009F008F6064 /* Search */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
 		};
-		A103852E243E0093008F6064 /* Views */ = {
+		A103852F243E009F008F6064 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				A1038532243E02B6008F6064 /* QuestionsTableViewController.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		A103852F243E009F008F6064 /* ModelViews */ = {
-			isa = PBXGroup;
-			children = (
+				A1038530243E00AF008F6064 /* Model */,
+				A10DFF26243F2D3400359771 /* Service.swift */,
+				A19A2A6D244570EF00B2AA77 /* QuestionsViewController.swift */,
+				A19A2A6B2444DD8000B2AA77 /* ViewModel.swift */,
 				A1038534243E038B008F6064 /* QuestionsViewModel.swift */,
+				A1038532243E02B6008F6064 /* QuestionsTableViewController.swift */,
+				A19A2A6F2445715B00B2AA77 /* SearchBackgroundViewController.swift */,
+				A19A2A712445720900B2AA77 /* SearchTableViewCell.swift */,
 			);
-			path = ModelViews;
+			path = Search;
 			sourceTree = "<group>";
 		};
 		A1038530243E00AF008F6064 /* Model */ = {
@@ -172,15 +183,17 @@
 				A10DFF20243E0C6200359771 /* Owner.swift */,
 				A10DFF22243E0C8A00359771 /* Item.swift */,
 				A10DFF24243E0CA800359771 /* Question.swift */,
+				A19A2A692444DB7B00B2AA77 /* QuestionInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		A1038531243E00BB008F6064 /* Services */ = {
+		A19A2A73244572AD00B2AA77 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A19A2A74244572C800B2AA77 /* BaseViewController.swift */,
 			);
-			path = Services;
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,7 +327,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10DFF27243F2D3400359771 /* Service.swift in Sources */,
+				A19A2A6A2444DB7B00B2AA77 /* QuestionInfo.swift in Sources */,
+				A19A2A702445715B00B2AA77 /* SearchBackgroundViewController.swift in Sources */,
+				A19A2A6E244570EF00B2AA77 /* QuestionsViewController.swift in Sources */,
 				A1038502243DFB85008F6064 /* ViewController.swift in Sources */,
+				A19A2A75244572C800B2AA77 /* BaseViewController.swift in Sources */,
+				A19A2A6C2444DD8000B2AA77 /* ViewModel.swift in Sources */,
 				A10DFF25243E0CA800359771 /* Question.swift in Sources */,
 				A10DFF21243E0C6200359771 /* Owner.swift in Sources */,
 				A1038535243E038B008F6064 /* QuestionsViewModel.swift in Sources */,
@@ -322,6 +341,7 @@
 				A10DFF23243E0C8A00359771 /* Item.swift in Sources */,
 				A1038500243DFB85008F6064 /* SceneDelegate.swift in Sources */,
 				A1038533243E02B6008F6064 /* QuestionsTableViewController.swift in Sources */,
+				A19A2A722445720900B2AA77 /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
