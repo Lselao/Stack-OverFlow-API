@@ -2,9 +2,10 @@
 //  Service.swift
 //  StackOverflowApp
 //
-//  Created by Kudzaiishe Mhou on 2020/04/07.
-//  Copyright © 2020 Kudzaiishe Mhou. All rights reserved.
+//  Created by lebose on 2020/04/08.
+//  Copyright © 2020 lebose. All rights reserved.
 //
+
 
 import Foundation
 
@@ -71,6 +72,7 @@ class QuestionsServiceImplementation: QuestionService { // conforming to a proto
     
 }
 
+// extention to check what kind of data comes back from stackoverflow
 
 extension Data {
     

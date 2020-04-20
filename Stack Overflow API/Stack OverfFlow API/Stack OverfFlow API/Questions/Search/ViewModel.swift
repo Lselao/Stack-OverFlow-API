@@ -2,14 +2,16 @@
 //  ViewModel.swift
 //  StackOverflowApp
 //
-//  Created by Kudzaiishe Mhou on 2020/04/07.
-//  Copyright © 2020 Kudzaiishe Mhou. All rights reserved.
+//  Created by lebose on 2020/04/08.
+//  Copyright © 2020 lebose. All rights reserved.
 //
+
 
 import Foundation
 
 class QuestionsViewModel {
     
+//    get service protocol and its implementations
     private var questionsService: QuestionService = QuestionsServiceImplementation()
     
     func fetchQuestions(with searchText: String, completion: @escaping ([QuestionInfo]?, NSError?) -> ()) {

@@ -2,8 +2,8 @@
 //  SearchBackGroundView.swift
 //  StackOverflowApp
 //
-//  Created by Kudzaiishe Mhou on 2020/04/08.
-//  Copyright © 2020 Kudzaiishe Mhou. All rights reserved.
+//  Created by lebose on 2020/04/08.
+//  Copyright © 2020 lebose. All rights reserved.
 //
 
 import Foundation
@@ -11,6 +11,7 @@ import UIKit
 
 class SearchBackgroundViewController: UIViewController {
     
+//    background lable
     private let backgroundLabel: UILabel = {
         
         let label = UILabel()
@@ -23,6 +24,8 @@ class SearchBackgroundViewController: UIViewController {
         return label
     }()
     
+//
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +33,8 @@ class SearchBackgroundViewController: UIViewController {
 
         self.setupView()
     }
+    
+//    home background color and text
     
     func setupView() {
         

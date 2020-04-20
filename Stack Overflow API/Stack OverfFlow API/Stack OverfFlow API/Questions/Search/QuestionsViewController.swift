@@ -2,8 +2,8 @@
 //  QuestionsTableViewController.swift
 //  StackOverflowApp
 //
-//  Created by Kudzaiishe Mhou on 2020/04/07.
-//  Copyright © 2020 Kudzaiishe Mhou. All rights reserved.
+//  Created by lebose on 2020/04/08.
+//  Copyright © 2020 lebose. All rights reserved.
 //
 
 import UIKit
@@ -18,6 +18,7 @@ class QuestionsViewController: UIViewController {
     
     private lazy var backgroundViewController = SearchBackgroundViewController()
     
+//    creating search bar
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
@@ -35,6 +36,7 @@ class QuestionsViewController: UIViewController {
         return searchController
     }()
     
+//    table view colors
     private lazy var tableViewController: UITableViewController = {
         let tableViewController = UITableViewController()
         tableViewController.tableView.delegate = self
@@ -45,6 +47,8 @@ class QuestionsViewController: UIViewController {
         
         return tableViewController
     }()
+    
+//    nav and search bar colors
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +64,8 @@ class QuestionsViewController: UIViewController {
         
         self.showBackgroundView()
     }
+    
+// search function
 
     
     func fetchData(with searchText: String) {
@@ -82,6 +88,8 @@ class QuestionsViewController: UIViewController {
     
 }
 
+
+// custom table cell spacing
 
 extension QuestionsViewController : UITableViewDelegate, UITableViewDataSource {
     
@@ -124,6 +132,7 @@ extension QuestionsViewController: UISearchBarDelegate, UISearchResultsUpdating 
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
+// check for user input
         guard let searchText = searchBar.text, !searchText.isEmpty else {
             return
         }
@@ -142,7 +151,7 @@ extension QuestionsViewController: UISearchBarDelegate, UISearchResultsUpdating 
         searchBar.resignFirstResponder()
         
         self.showBackgroundView()
-        
+//filtering using input string
         self.filteredQuestionsInfo = []
         
     }
