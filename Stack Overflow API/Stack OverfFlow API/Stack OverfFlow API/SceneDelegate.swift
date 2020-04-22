@@ -17,12 +17,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             
-            let rootVC = QuestionsViewController()
-            let nav = UINavigationController(rootViewController: rootVC)
-            nav.view.backgroundColor = UIColor.blueColor()
-            window.rootViewController = nav
+//            let rootVC = QuestionsViewController()
+//            let nav = UINavigationController(rootViewController: rootVC)
+//            nav.view.backgroundColor = UIColor.blueColor()
+//            window.rootViewController = nav
+//
+//            self.window = window
+//            window.makeKeyAndVisible()
             
-            self.window = window
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateInitialViewController()
+
+            self.window?.rootViewController = vc
             window.makeKeyAndVisible()
         }
     }

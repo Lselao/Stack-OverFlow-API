@@ -15,13 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
-
-        let rootVC = QuestionsViewController()
-        let nav = UINavigationController(rootViewController: rootVC)
-        nav.view.backgroundColor = UIColor.blueColor()
-        self.window?.rootViewController = nav
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.makeKeyAndVisible()
+//
+//        let rootVC = QuestionsViewController()
+//        let nav = UINavigationController(rootViewController: rootVC)
+//        nav.view.backgroundColor = UIColor.blueColor()
+//        self.window?.rootViewController = nav
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                   let vc = storyboard.instantiateInitialViewController()
+                   self.window?.rootViewController = vc
 
         return true
     }
