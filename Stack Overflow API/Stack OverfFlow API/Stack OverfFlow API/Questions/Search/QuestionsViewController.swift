@@ -118,8 +118,8 @@ extension QuestionsViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showQuestions", sender: nil)
-        
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let qnsCell = tableView.dequeueReusableCell(withIdentifier: "\(SearchTableViewCell.self)", for: indexPath) as! SearchTableViewCell
@@ -128,6 +128,7 @@ extension QuestionsViewController : UITableViewDelegate, UITableViewDataSource {
         
         return qnsCell
     }
+    
 }
 
 

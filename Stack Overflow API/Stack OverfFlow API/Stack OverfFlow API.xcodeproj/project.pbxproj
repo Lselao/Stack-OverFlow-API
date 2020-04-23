@@ -24,7 +24,7 @@
 		A19A2A6E244570EF00B2AA77 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19A2A6D244570EF00B2AA77 /* QuestionsViewController.swift */; };
 		A19A2A702445715B00B2AA77 /* SearchBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19A2A6F2445715B00B2AA77 /* SearchBackgroundViewController.swift */; };
 		A19A2A722445720900B2AA77 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19A2A712445720900B2AA77 /* SearchTableViewCell.swift */; };
-		A19A2A75244572C800B2AA77 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19A2A74244572C800B2AA77 /* BaseViewController.swift */; };
+		A1AA8FAA2450E28900D3BF7A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA8FA92450E28900D3BF7A /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +68,7 @@
 		A19A2A6D244570EF00B2AA77 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		A19A2A6F2445715B00B2AA77 /* SearchBackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBackgroundViewController.swift; sourceTree = "<group>"; };
 		A19A2A712445720900B2AA77 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
-		A19A2A74244572C800B2AA77 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A1AA8FA92450E28900D3BF7A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +185,7 @@
 		A19A2A73244572AD00B2AA77 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				A19A2A74244572C800B2AA77 /* BaseViewController.swift */,
+				A1AA8FA92450E28900D3BF7A /* MainViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -326,8 +326,8 @@
 				A19A2A702445715B00B2AA77 /* SearchBackgroundViewController.swift in Sources */,
 				A19A2A6E244570EF00B2AA77 /* QuestionsViewController.swift in Sources */,
 				A1038502243DFB85008F6064 /* ViewController.swift in Sources */,
-				A19A2A75244572C800B2AA77 /* BaseViewController.swift in Sources */,
 				A19A2A6C2444DD8000B2AA77 /* ViewModel.swift in Sources */,
+				A1AA8FAA2450E28900D3BF7A /* MainViewController.swift in Sources */,
 				A10DFF25243E0CA800359771 /* Question.swift in Sources */,
 				A10DFF21243E0C6200359771 /* Owner.swift in Sources */,
 				A10384FE243DFB85008F6064 /* AppDelegate.swift in Sources */,

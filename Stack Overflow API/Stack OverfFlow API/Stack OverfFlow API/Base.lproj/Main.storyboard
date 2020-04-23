@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="af5-Eh-zdh">
             <objects>
-                <viewController id="qPZ-T9-zRW" sceneMemberID="viewController">
+                <viewController id="qPZ-T9-zRW" customClass="MainViewController" customModule="Stack_OverfFlow_API" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CtS-4u-I2A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,21 +19,32 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slv-dC-jrh">
                                 <rect key="frame" x="131" y="289" width="152" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="DISPLAY QUESTION"/>
                                 <connections>
-                                    <segue destination="zxz-P0-7OG" kind="show" id="kuo-ep-XGR"/>
+                                    <action selector="displayBtnTapped:" destination="fTP-3l-RVW" eventType="touchUpInside" id="Joe-fB-Ct7"/>
+                                    <action selector="displayQuestionBtnTapped:" destination="qPZ-T9-zRW" eventType="touchUpInside" id="dLS-4t-fss"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7um-Ga-eqC">
+                                <rect key="frame" x="154" y="203" width="107" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="da5-8I-qCZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="We6-UI-5v8"/>
                     <connections>
+                        <outlet property="displayQuestionsBtn" destination="slv-dC-jrh" id="n7n-qw-wOt"/>
+                        <outlet property="questionTitle" destination="7um-Ga-eqC" id="L9O-E7-Aqe"/>
                         <segue destination="zxz-P0-7OG" kind="show" identifier="showQuestions" id="Zox-PL-UOw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BuD-au-DDO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fTP-3l-RVW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1404.3478260869567" y="-26.086956521739133"/>
         </scene>
@@ -62,15 +73,6 @@
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lXp-6j-K46">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvG-n3-gmG">
-                                                    <rect key="frame" x="174" y="24" width="44" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" red="0.85883516069999999" green="0.85880273579999999" blue="0.85882467029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <size key="customSize" width="414" height="84"/>
@@ -174,7 +176,4 @@
     <resources>
         <image name="download" width="200" height="200"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="kuo-ep-XGR"/>
-    </inferredMetricsTieBreakers>
 </document>
