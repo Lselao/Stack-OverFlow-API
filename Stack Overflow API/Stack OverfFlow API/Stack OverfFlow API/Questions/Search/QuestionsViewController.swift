@@ -116,9 +116,19 @@ extension QuestionsViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showQuestions", sender: nil)
-    }
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+          
+          // instantiate a storyboard view
+          let storyboard = UIStoryboard(name: "Main", bundle: nil)
+          let controller = storyboard.instantiateViewController(withIdentifier: "MainViewController") as? MainViewController
+          
+          
+          // pass the data to a variable in the next viewcontroller
+          controller?.questionsInfo = filteredQuestionsInfo[indexPath.section]
+          
+          // push the view controller
+          self.navigationController?.pushViewController(controller ?? UIViewController(), animated: true)
+      }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

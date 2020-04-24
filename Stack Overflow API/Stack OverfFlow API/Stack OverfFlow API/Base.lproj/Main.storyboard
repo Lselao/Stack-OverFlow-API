@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yqv-Ih-OKh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yqv-Ih-OKh">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,7 @@
         <!--Main View Controller-->
         <scene sceneID="af5-Eh-zdh">
             <objects>
-                <viewController id="qPZ-T9-zRW" customClass="MainViewController" customModule="Stack_OverfFlow_API" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="qPZ-T9-zRW" customClass="MainViewController" customModule="Stack_OverfFlow_API" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CtS-4u-I2A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,7 +40,7 @@
                     <connections>
                         <outlet property="displayQuestionsBtn" destination="slv-dC-jrh" id="n7n-qw-wOt"/>
                         <outlet property="questionTitle" destination="7um-Ga-eqC" id="L9O-E7-Aqe"/>
-                        <segue destination="zxz-P0-7OG" kind="show" identifier="showQuestions" id="Zox-PL-UOw"/>
+                        <outlet property="yyyy" destination="slv-dC-jrh" id="lnT-Yo-7NO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BuD-au-DDO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="1404.3478260869567" y="-26.086956521739133"/>
         </scene>
-        <!--View Controller-->
+        <!--Test View Controller-->
         <scene sceneID="LfH-se-f2Y">
             <objects>
-                <viewController id="zxz-P0-7OG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestViewController" id="zxz-P0-7OG" customClass="TestViewController" customModule="Stack_OverfFlow_API" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eES-EH-dTe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,9 +164,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="qPZ-T9-zRW" kind="relationship" relationship="rootViewController" id="XfQ-tw-l8a"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BB6-hf-h45" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

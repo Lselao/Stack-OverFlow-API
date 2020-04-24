@@ -10,24 +10,19 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    
     @IBOutlet weak var questionTitle: UILabel!
     @IBOutlet weak var displayQuestionsBtn: UIButton!
-    var questionsInfo: QuestionInfo?
     
+    var questionsInfo: QuestionInfo?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-    
     
     @IBAction func displayQuestionBtnTapped(_ sender: Any) {
-        questionTitle.text = questionsInfo?.questionTitle
+            questionTitle.text = questionsInfo?.questionTitle
+        
     }
-    
-
-
 }
 
