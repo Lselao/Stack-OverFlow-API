@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yqv-Ih-OKh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,8 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7um-Ga-eqC">
+                                <rect key="frame" x="154" y="203" width="107" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slv-dC-jrh">
-                                <rect key="frame" x="131" y="289" width="152" height="39"/>
+                                <rect key="frame" x="131" y="501" width="152" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="DISPLAY QUESTION"/>
                                 <connections>
@@ -25,8 +32,8 @@
                                     <action selector="displayQuestionBtnTapped:" destination="qPZ-T9-zRW" eventType="touchUpInside" id="dLS-4t-fss"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7um-Ga-eqC">
-                                <rect key="frame" x="154" y="203" width="107" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddo-wZ-4Yc">
+                                <rect key="frame" x="162" y="87" width="81" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -39,8 +46,8 @@
                     <navigationItem key="navigationItem" id="We6-UI-5v8"/>
                     <connections>
                         <outlet property="displayQuestionsBtn" destination="slv-dC-jrh" id="n7n-qw-wOt"/>
-                        <outlet property="questionTitle" destination="7um-Ga-eqC" id="L9O-E7-Aqe"/>
-                        <outlet property="yyyy" destination="slv-dC-jrh" id="lnT-Yo-7NO"/>
+                        <outlet property="questionTitle" destination="7um-Ga-eqC" id="drY-wx-KDM"/>
+                        <outlet property="userName" destination="ddo-wZ-4Yc" id="I9b-28-UDz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BuD-au-DDO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -48,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="1404.3478260869567" y="-26.086956521739133"/>
         </scene>
-        <!--Test View Controller-->
+        <!--View Controller-->
         <scene sceneID="LfH-se-f2Y">
             <objects>
-                <viewController storyboardIdentifier="TestViewController" id="zxz-P0-7OG" customClass="TestViewController" customModule="Stack_OverfFlow_API" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zxz-P0-7OG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eES-EH-dTe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

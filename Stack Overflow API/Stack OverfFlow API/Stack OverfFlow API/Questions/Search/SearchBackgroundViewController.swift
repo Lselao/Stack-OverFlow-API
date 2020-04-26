@@ -9,9 +9,14 @@
 import Foundation
 import UIKit
 
+
+// home page
+// search bar
+// Nav bar
+
 class SearchBackgroundViewController: UIViewController {
     
-//    background lable
+
     private let backgroundLabel: UILabel = {
         
         let label = UILabel()
@@ -24,7 +29,8 @@ class SearchBackgroundViewController: UIViewController {
         return label
     }()
     
-//
+    
+// nav bar
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +40,6 @@ class SearchBackgroundViewController: UIViewController {
         self.setupView()
     }
     
-//    home background color and text
     
     func setupView() {
         

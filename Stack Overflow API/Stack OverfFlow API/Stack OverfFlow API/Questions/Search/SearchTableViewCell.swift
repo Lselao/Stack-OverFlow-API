@@ -7,6 +7,10 @@
 //
 
 import UIKit
+// constrains
+// linking lables and passing data to them
+// switching parent and child views
+// stackviews with constrained labels
 
 class SearchTableViewCell: UITableViewCell {
     
