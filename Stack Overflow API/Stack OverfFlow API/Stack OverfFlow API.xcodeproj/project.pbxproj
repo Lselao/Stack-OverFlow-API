@@ -120,9 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				A103852D243DFC44008F6064 /* Questions */,
-				A10384FD243DFB85008F6064 /* AppDelegate.swift */,
-				A10384FF243DFB85008F6064 /* SceneDelegate.swift */,
-				A1038501243DFB85008F6064 /* ViewController.swift */,
+				A1F379F42456096B00DBBC6A /* Defaults */,
 				A1038503243DFB85008F6064 /* Main.storyboard */,
 				A1038506243DFB87008F6064 /* Assets.xcassets */,
 				A1038508243DFB87008F6064 /* LaunchScreen.storyboard */,
@@ -152,7 +150,6 @@
 		A103852D243DFC44008F6064 /* Questions */ = {
 			isa = PBXGroup;
 			children = (
-				A19A2A73244572AD00B2AA77 /* Common */,
 				A103852F243E009F008F6064 /* Search */,
 			);
 			path = Questions;
@@ -161,12 +158,10 @@
 		A103852F243E009F008F6064 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				A1038530243E00AF008F6064 /* Model */,
-				A19A2A6D244570EF00B2AA77 /* QuestionsViewController.swift */,
-				A19A2A6B2444DD8000B2AA77 /* ViewModel.swift */,
 				A10DFF26243F2D3400359771 /* Service.swift */,
-				A19A2A6F2445715B00B2AA77 /* SearchBackgroundViewController.swift */,
-				A19A2A712445720900B2AA77 /* SearchTableViewCell.swift */,
+				A1F379F3245608FE00DBBC6A /* ViewModel */,
+				A1038530243E00AF008F6064 /* Model */,
+				A1F379F22456078D00DBBC6A /* View */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -182,12 +177,33 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		A19A2A73244572AD00B2AA77 /* Common */ = {
+		A1F379F22456078D00DBBC6A /* View */ = {
 			isa = PBXGroup;
 			children = (
 				A1AA8FA92450E28900D3BF7A /* MainViewController.swift */,
+				A19A2A6F2445715B00B2AA77 /* SearchBackgroundViewController.swift */,
+				A19A2A712445720900B2AA77 /* SearchTableViewCell.swift */,
 			);
-			path = Common;
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1F379F3245608FE00DBBC6A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A19A2A6D244570EF00B2AA77 /* QuestionsViewController.swift */,
+				A19A2A6B2444DD8000B2AA77 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A1F379F42456096B00DBBC6A /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				A10384FD243DFB85008F6064 /* AppDelegate.swift */,
+				A10384FF243DFB85008F6064 /* SceneDelegate.swift */,
+				A1038501243DFB85008F6064 /* ViewController.swift */,
+			);
+			path = Defaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
