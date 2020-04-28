@@ -1,20 +1,16 @@
 //
-//  QuestionInfo.swift
-//  StackOverflowApp
+//  scr03Info.swift
+//  Stack OverfFlow API
 //
-//  Created by lebose on 2020/04/08.
+//  Created by lebose on 2020/04/28.
 //  Copyright © 2020 lebose. All rights reserved.
 //
 
-
 import Foundation
 
-//Model given to a cell
-
-struct QuestionInfo {
-    var questionTitle, username, votes, answers, views: String?
-    var questionAnswered: Bool
-    var creationDate, reputation: Int?
+struct scr03Info {
+   
+    var creationgDate, reputation: Int?
     
     
     init(questionTitle: String?,
@@ -30,6 +26,5 @@ struct QuestionInfo {
         self.answers = answers
         self.views = views
         self.questionAnswered = questionAnswered
-        
     }
 }

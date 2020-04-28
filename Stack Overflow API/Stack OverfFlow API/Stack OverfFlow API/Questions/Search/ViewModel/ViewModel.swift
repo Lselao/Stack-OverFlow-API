@@ -12,6 +12,7 @@ import Foundation
 class QuestionsViewModel {
     
 //    get service protocol and its implementations
+//    filter incoming data 
     private var questionsService: QuestionService = QuestionsServiceImplementation()
     
     func fetchQuestions(with searchText: String, completion: @escaping ([QuestionInfo]?, NSError?) -> ()) {

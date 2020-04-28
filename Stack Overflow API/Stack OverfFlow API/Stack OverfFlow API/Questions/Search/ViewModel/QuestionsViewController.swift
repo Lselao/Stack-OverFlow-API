@@ -121,7 +121,6 @@ extension QuestionsViewController : UITableViewDelegate, UITableViewDataSource {
          let storyboard = UIStoryboard(name: "Main", bundle: nil)
          let controller = storyboard.instantiateViewController(withIdentifier: "MainViewController") as? MainViewController
          
-         // pass the data to a variable in the next viewcontroller
          controller?.questionsInfo = filteredQuestionsInfo[indexPath.section]
          
          self.navigationController?.pushViewController(controller ?? UIViewController(), animated: true)

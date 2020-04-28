@@ -10,14 +10,16 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    @IBOutlet var SCR03: UITableView!
+    let url = "https://api.stackexchange.com/2.2/questions?pagesize=20&order=desc&sort=activity&tagged=s wift%203&site=stackoverflow"
     
-    
+    @IBOutlet weak var dp: UIImageView!
+    @IBOutlet weak var reputation: UILabel!
     @IBOutlet weak var dob: UILabel!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var questionTitle: UILabel!
     @IBOutlet weak var displayQuestionsBtn: UIButton!
     
+    var Owner: Owner?
     var Item: Item?
     var questionsInfo: QuestionInfo?
     
@@ -25,33 +27,31 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        SCR03.delegate = self
-//        SCR03.dataSource = self
     }
     
-    
+
     @IBAction func displayQuestionBtnTapped(_ sender: Any) {
         questionTitle.text = questionsInfo?.questionTitle
         userName.text = questionsInfo?.username
-//        dob = questionsInfo?.creationgDate
-    }
+//        reputation.text = Owner?.reputation
+       
     
-
+        
+    }
 
 }
+
+
+//    let getImgFromUrl = URLSession(configuration: .default).dataTask(with: url!) {(data, response, error) in
+//               if let error = error {
+//                   print("Error Occurred: \(error)")
+//               } else {
+//                   if (response as? HTTPURLResponse) != nil {
+//                       DispatchQueue.main.async {
+//                           self.dp.image = UIImage(data : data!)
+//                       }
+//                   }
+//               }
+//           }
 //
-//extension MainViewController : UITableViewDelegate {
-//
-//}
-//
-//extension MainViewController : UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 2
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        <#code#>
-//    }
-//
-//
-//}
+

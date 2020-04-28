@@ -215,6 +215,8 @@ extension SearchTableViewCell {
         self.answersLabel.text = (question.answers ?? "") + " answers"
         self.viewsLabel.text = (question.views ?? "") + " views"
         self.answeredAvatar.isHidden = question.questionAnswered
+      
+        
     }
     
 }

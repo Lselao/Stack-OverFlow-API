@@ -110,7 +110,9 @@
                     <connections>
                         <outlet property="displayQuestionsBtn" destination="slv-dC-jrh" id="n7n-qw-wOt"/>
                         <outlet property="dob" destination="GQl-tr-ax1" id="K9f-6C-SQB"/>
+                        <outlet property="dp" destination="aYQ-dy-LmE" id="vEw-9x-2Gr"/>
                         <outlet property="questionTitle" destination="7um-Ga-eqC" id="drY-wx-KDM"/>
+                        <outlet property="reputation" destination="GQl-tr-ax1" id="5fJ-vD-UAj"/>
                         <outlet property="userName" destination="yNd-Qz-KZN" id="5nO-2l-AfD"/>
                     </connections>
                 </viewController>
