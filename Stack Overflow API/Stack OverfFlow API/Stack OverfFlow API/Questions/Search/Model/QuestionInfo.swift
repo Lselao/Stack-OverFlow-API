@@ -14,7 +14,9 @@ import Foundation
 struct QuestionInfo {
     var questionTitle, username, votes, answers, views: String?
     var questionAnswered: Bool
-    var creationDate, reputation: Int?
+    var creationDate: String?
+    var reputation: String?
+    var profileImage: String?
     
     
     init(questionTitle: String?,
@@ -22,6 +24,9 @@ struct QuestionInfo {
          votes: String?,
          answers: String?,
          views: String?,
+         creationDate: String?,
+         reputation: String?,
+         profileImage: String?,
          questionAnswered: Bool) {
         
         self.questionTitle = questionTitle
@@ -29,7 +34,9 @@ struct QuestionInfo {
         self.votes = votes
         self.answers = answers
         self.views = views
+        self.creationDate = creationDate
+        self.reputation = reputation
         self.questionAnswered = questionAnswered
-        
+        self.profileImage = profileImage
     }
 }

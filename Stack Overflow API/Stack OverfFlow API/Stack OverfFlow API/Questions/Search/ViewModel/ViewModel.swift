@@ -60,6 +60,9 @@ class QuestionsViewModel {
                                                       votes: "\(item.viewCount)",
                                                       answers: "\(item.answerCount)",                                  
                                                       views: "\(item.viewCount)",
+                    creationDate: "\(NSDate(timeIntervalSince1970: TimeInterval(item.creationDate)))",
+                    reputation: "\(item.owner.reputation)",
+                    profileImage: "\(item.owner.profileImage)",
                                                       questionAnswered: item.isAnswered))
             }
         }

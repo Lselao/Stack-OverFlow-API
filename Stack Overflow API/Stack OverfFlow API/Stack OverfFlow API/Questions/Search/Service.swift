@@ -48,6 +48,7 @@ class QuestionsServiceImplementation: QuestionService { // conforming to a proto
             guard let responsedData = data else {
                 return completion(nil, NSError(domain: "The data is nil", code: 0, userInfo: nil))
             }
+           
             
             guard let _ = data,
             let response = httpResponse as? HTTPURLResponse,
@@ -58,7 +59,8 @@ class QuestionsServiceImplementation: QuestionService { // conforming to a proto
             }
             
             do {
-                let serviceResponse = try JSONDecoder().decode(Question.self, from: responsedData) // decoding the data into models
+                let serviceResponse = try JSONDecoder().decode(Question.self, from: responsedData)
+//                print(serviceResponse)
                 completion(serviceResponse, nil)
             }
             catch {
