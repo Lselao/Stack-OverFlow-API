@@ -10,27 +10,48 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet var SCR03: UITableView!
     
+    
+    @IBOutlet weak var dob: UILabel!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var questionTitle: UILabel!
     @IBOutlet weak var displayQuestionsBtn: UIButton!
     
+    var Item: Item?
     var questionsInfo: QuestionInfo?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+//        SCR03.delegate = self
+//        SCR03.dataSource = self
     }
     
     
     @IBAction func displayQuestionBtnTapped(_ sender: Any) {
         questionTitle.text = questionsInfo?.questionTitle
         userName.text = questionsInfo?.username
-//        rep.Int = Owner?.reputation
+//        dob = questionsInfo?.creationgDate
     }
     
 
 
 }
+//
+//extension MainViewController : UITableViewDelegate {
+//
+//}
+//
+//extension MainViewController : UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 2
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        <#code#>
+//    }
+//
+//
+//}

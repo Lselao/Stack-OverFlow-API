@@ -57,9 +57,9 @@ class QuestionsViewModel {
                 questionInfoArray.append(QuestionInfo(questionTitle: item.title,
                                                       username: item.owner.displayName,
                                                       votes: "\(item.viewCount)",
-                                                      answers: "\(item.answerCount)",
-                    views: "\(item.viewCount)",
-                    questionAnswered: item.isAnswered))
+                                                      answers: "\(item.answerCount)",                                  
+                                                      views: "\(item.viewCount)",
+                                                      questionAnswered: item.isAnswered))
             }
         }
         

@@ -118,7 +118,6 @@ extension QuestionsViewController : UITableViewDelegate, UITableViewDataSource {
     
    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          
-         // instantiate a storyboard view
          let storyboard = UIStoryboard(name: "Main", bundle: nil)
          let controller = storyboard.instantiateViewController(withIdentifier: "MainViewController") as? MainViewController
          

@@ -14,6 +14,8 @@ import Foundation
 struct QuestionInfo {
     var questionTitle, username, votes, answers, views: String?
     var questionAnswered: Bool
+    var creationgDate, reputation: Int?
+    
     
     init(questionTitle: String?,
          username: String?,
