@@ -17,6 +17,7 @@ struct QuestionInfo {
     var creationDate: String?
     var reputation: String?
     var profileImage: String?
+    var tags: String?
     
     
     init(questionTitle: String?,
@@ -27,6 +28,7 @@ struct QuestionInfo {
          creationDate: String?,
          reputation: String?,
          profileImage: String?,
+         tags: String?,
          questionAnswered: Bool) {
         
         self.questionTitle = questionTitle
@@ -38,5 +40,6 @@ struct QuestionInfo {
         self.reputation = reputation
         self.questionAnswered = questionAnswered
         self.profileImage = profileImage
+        self.tags = tags
     }
 }

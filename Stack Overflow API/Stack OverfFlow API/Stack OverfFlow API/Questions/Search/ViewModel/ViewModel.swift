@@ -63,6 +63,7 @@ class QuestionsViewModel {
                     creationDate: "\(NSDate(timeIntervalSince1970: TimeInterval(item.creationDate)))",
                     reputation: "\(item.owner.reputation)",
                     profileImage: "\(item.owner.profileImage)",
+                    tags: "\(item.tags)",
                                                       questionAnswered: item.isAnswered))
             }
         }
