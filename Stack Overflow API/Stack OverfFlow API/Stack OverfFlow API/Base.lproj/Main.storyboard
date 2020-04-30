@@ -94,7 +94,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="338" id="QxO-Qv-Ise"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.35686796900000001" green="0.35685330630000001" blue="0.35686323050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>

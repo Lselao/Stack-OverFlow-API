@@ -18,13 +18,14 @@ class MainViewController: UIViewController {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var questionTitle: UILabel!
 
-    
     var questionsInfo: QuestionInfo?
     var arrayTags = ""
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
          questionTitle.text = questionsInfo?.questionTitle
             userName.text = questionsInfo?.username
             date.text = "asked by " + (questionsInfo?.creationDate ?? "")
@@ -32,7 +33,7 @@ class MainViewController: UIViewController {
         
         
         
-        
+//        tags
         for (index,tag) in questionsInfo!.tags.enumerated(){
             arrayTags = arrayTags + tag!
             
@@ -40,13 +41,25 @@ class MainViewController: UIViewController {
                 arrayTags = arrayTags + ", "
             }
         }
-        
         tags.text = arrayTags
             
             
         
+//        date
+//        let formatter: DateFormatter = {
+//
+//            let formatter = DateFormatter()
+//                   formatter.timeZone = .current
+//                   formatter.dateStyle = .full
+//                   formatter.locale = .current
+//
+//            return formatter
+//        let date = Date()
+//        date.text = formatter.string(from: date)
         
-            
+        
+        
+
         let url = URL(string:
             questionsInfo?.profileImage! ??  "")
         let task = URLSession.shared.dataTask(with: url!) { data, response, error in
