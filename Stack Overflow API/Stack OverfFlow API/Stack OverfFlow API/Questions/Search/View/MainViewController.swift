@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
 
 
+    @IBOutlet weak var tags: UILabel!
     @IBOutlet weak var reputation: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var date: UILabel!
@@ -18,31 +19,43 @@ class MainViewController: UIViewController {
     @IBOutlet weak var questionTitle: UILabel!
 
     
-    var Owner: Owner?
-    var Item: Item?
     var questionsInfo: QuestionInfo?
-    
+    var arrayTags = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
          questionTitle.text = questionsInfo?.questionTitle
             userName.text = questionsInfo?.username
-            date.text = questionsInfo?.creationDate
+            date.text = "asked by " + (questionsInfo?.creationDate ?? "")
             reputation.text = questionsInfo?.reputation
+        
+        
+        
+        
+        for (index,tag) in questionsInfo!.tags.enumerated(){
+            arrayTags = arrayTags + tag!
             
-            
-            
-            let url = URL(string:
-                questionsInfo?.profileImage! ??  "")
-            let task = URLSession.shared.dataTask(with: url!) { data, response, error in
-                guard let data = data, error == nil else { return }
-                
-                DispatchQueue.main.async() {
-                    self.profileImage.image = UIImage(data : data)
-                }
+            if index != questionsInfo!.tags.count - 1 {
+                arrayTags = arrayTags + ", "
             }
-            task.resume()
         }
-
+        
+        tags.text = arrayTags
+            
+            
+        
+        
+            
+        let url = URL(string:
+            questionsInfo?.profileImage! ??  "")
+        let task = URLSession.shared.dataTask(with: url!) { data, response, error in
+            guard let data = data, error == nil else { return }
+                
+            DispatchQueue.main.async() {
+                self.profileImage.image = UIImage(data : data)
+            }
+        }
+        task.resume()
     }
+}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="landscape" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,14 +12,14 @@
             <objects>
                 <viewController storyboardIdentifier="MainViewController" id="qPZ-T9-zRW" customClass="MainViewController" customModule="Stack_OverfFlow_API" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CtS-4u-I2A">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9VE-so-yQl">
-                                <rect key="frame" x="0.0" y="44" width="736" height="77"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="77"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Title" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7um-Ga-eqC">
-                                        <rect key="frame" x="8" y="7.9999999999999982" width="706" height="20.333333333333329"/>
+                                        <rect key="frame" x="8" y="7.9999999999999982" width="384" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -34,7 +34,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ZI-ay-Tjj">
-                                <rect key="frame" x="0.0" y="349" width="736" height="65"/>
+                                <rect key="frame" x="0.0" y="671" width="414" height="65"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="aYQ-dy-LmE">
                                         <rect key="frame" x="8" y="2" width="60" height="60"/>
@@ -44,22 +44,22 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="I97-wX-7zJ">
-                                        <rect key="frame" x="83" y="9" width="545" height="46"/>
+                                        <rect key="frame" x="83" y="9" width="223" height="46"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNd-Qz-KZN">
-                                                <rect key="frame" x="0.0" y="0.0" width="545" height="12"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="223" height="12"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" red="0.53726243969999998" green="0.53724139930000003" blue="0.53725570440000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reputation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmu-Ej-VxS">
-                                                <rect key="frame" x="0.0" y="17" width="545" height="12"/>
+                                                <rect key="frame" x="0.0" y="17" width="223" height="12"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQl-tr-ax1">
-                                                <rect key="frame" x="0.0" y="34" width="545" height="12"/>
+                                                <rect key="frame" x="0.0" y="34" width="223" height="12"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" red="0.53726243969999998" green="0.53724139930000003" blue="0.53725570440000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -82,11 +82,11 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcW-oQ-CLx">
-                                <rect key="frame" x="0.0" y="121" width="736" height="198"/>
+                                <rect key="frame" x="0.0" y="121" width="414" height="520"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5iS-Xb-V7a">
-                                <rect key="frame" x="0.0" y="327" width="736" height="14"/>
+                                <rect key="frame" x="0.0" y="649" width="414" height="14"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tags" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mL9-Me-00c">
                                         <rect key="frame" x="10" y="1" width="338" height="12"/>
@@ -135,6 +135,7 @@
                         <outlet property="profileImage" destination="aYQ-dy-LmE" id="E7y-PM-x5n"/>
                         <outlet property="questionTitle" destination="7um-Ga-eqC" id="drY-wx-KDM"/>
                         <outlet property="reputation" destination="jmu-Ej-VxS" id="eYJ-MH-OFv"/>
+                        <outlet property="tags" destination="mL9-Me-00c" id="Vfd-Ma-u3R"/>
                         <outlet property="userName" destination="yNd-Qz-KZN" id="5nO-2l-AfD"/>
                     </connections>
                 </viewController>
@@ -148,7 +149,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TYV-gb-I3F" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g34-Am-jen">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
