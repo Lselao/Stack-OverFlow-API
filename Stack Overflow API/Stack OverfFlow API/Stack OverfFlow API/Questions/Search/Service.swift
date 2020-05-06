@@ -22,7 +22,7 @@ class QuestionsServiceImplementation: QuestionService { // conforming to a proto
     func fetchQuestions(with searchText: String, completion: @escaping (Question?, NSError?) -> Void) { // implementation of the protocol
         
         let serviceUrl =
-        "https://api.stackexchange.com/2.2/questions?order=desc&sort=activity&tagged=\(searchText)&site=stackoverflow"
+        "https://api.stackexchange.com/2.2/questions?order=desc&sort=activity&tagged=\(searchText)&site=stackoverflow&filter=withbody"
         
         QuestionsServiceImplementation.serviceLock.lock()
         
@@ -73,27 +73,3 @@ class QuestionsServiceImplementation: QuestionService { // conforming to a proto
     }
     
 }
-
-// extention to check what kind of data comes back from stackoverflow
-
-//extension Data {
-//
-//    func hnt_description() -> String? {
-//        return String(data: self, encoding: .utf8)
-//    }
-//
-//    /// Returns valid JSON string id possible
-//    func hnt_JSONString() -> NSString? {
-//
-//        guard let _ = try? JSONSerialization.jsonObject(with: self, options: []) else {
-//            return nil // data cannot be deserialized, invalid JSON
-//        }
-//
-//        guard let str = String(data: self, encoding: .utf8) else {
-//            return nil // data to string conversation failed
-//        }
-//
-//        // NSString conversion necessary, Swift.String is an escaped string ):
-//        return NSString(string: str)
-//    }
-//}

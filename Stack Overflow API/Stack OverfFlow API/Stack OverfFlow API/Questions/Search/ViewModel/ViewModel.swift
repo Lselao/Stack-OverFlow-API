@@ -55,16 +55,17 @@ class QuestionsViewModel {
         _ = questions.map { question in
            
             question.items.map { item in
-                questionInfoArray.append(QuestionInfo(questionTitle: item.title,
-                                                      username: item.owner.displayName,
-                                                      votes: "\(item.viewCount)",
-                                                      answers: "\(item.answerCount)",                                  
-                                                      views: "\(item.viewCount)",
-                    creationDate: "\(NSDate(timeIntervalSince1970: TimeInterval(item.creationDate)))",
-                    reputation: "\(item.owner.reputation)",
-                    profileImage: "\(item.owner.profileImage)",
-                    tags: item.tags,
-                                                      questionAnswered: item.isAnswered))
+               questionInfoArray.append(QuestionInfo(questionTitle: item.title,
+                                                  username: item.owner.displayName,
+                                                  votes: "\(item.viewCount)",
+                                                  answers: "\(item.answerCount)",
+                                                  views: "\(item.viewCount)",
+                creationDate: "\(NSDate(timeIntervalSince1970: TimeInterval(item.creationDate)))",
+                reputation: "\(item.owner.reputation)",
+                profileImage: "\(item.owner.profileImage)",
+                tags: item.tags,
+                body: "\(item.body)",
+                questionAnswered: item.isAnswered))
             }
         }
         

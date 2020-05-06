@@ -10,7 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-
+    @IBOutlet weak var questionBody: UILabel!
     @IBOutlet weak var tags: UILabel!
     @IBOutlet weak var reputation: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
@@ -30,6 +30,7 @@ class MainViewController: UIViewController {
             userName.text = questionsInfo?.username
             date.text = "asked by " + (questionsInfo?.creationDate ?? "")
             reputation.text = questionsInfo?.reputation
+            setQuestionBody(htmlString: (questionsInfo?.body)!)
         
         
         
@@ -43,22 +44,6 @@ class MainViewController: UIViewController {
         }
         tags.text = arrayTags
             
-            
-        
-//        date
-//        let formatter: DateFormatter = {
-//
-//            let formatter = DateFormatter()
-//                   formatter.timeZone = .current
-//                   formatter.dateStyle = .full
-//                   formatter.locale = .current
-//
-//            return formatter
-//        let date = Date()
-//        date.text = formatter.string(from: date)
-        
-        
-        
 
         let url = URL(string:
             questionsInfo?.profileImage! ??  "")
@@ -71,4 +56,18 @@ class MainViewController: UIViewController {
         }
         task.resume()
     }
+    
+    func setQuestionBody(htmlString: String) {
+
+             let data = Data(htmlString.utf8)
+
+             if let attributedString = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) {
+
+                 questionBody.attributedText = attributedString
+
+                 questionBody.font = UIFont.systemFont(ofSize: 13, weight: .regular)
+
+             }
+
+         }
 }

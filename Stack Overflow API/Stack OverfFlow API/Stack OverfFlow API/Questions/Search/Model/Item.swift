@@ -16,6 +16,7 @@ struct Item: Codable {
      let creationDate, questionID: Int
      let link: String
      let title: String
+     let body: String
      let closedDate, acceptedAnswerID: Int?
      let closedReason: String?
      let lastEditDate, bountyAmount, bountyClosesDate: Int?
@@ -26,6 +27,7 @@ struct Item: Codable {
          case viewCount = "view_count"
          case answerCount = "answer_count"
          case score
+         case body
          case lastActivityDate = "last_activity_date"
          case creationDate = "creation_date"
          case questionID = "question_id"
