@@ -10,6 +10,8 @@ import UIKit
 
 class QuestionsViewController: UIViewController {
     
+    @IBOutlet weak var tableView : UITableView!
+    
     var activityView: UIActivityIndicatorView?
     
     private let viewModel = QuestionsViewModel()
@@ -37,17 +39,17 @@ class QuestionsViewController: UIViewController {
     }()
     
 //    table view colors
-    private lazy var tableViewController: UITableViewController = {
-        let tableViewController = UITableViewController()
-        tableViewController.tableView.delegate = self
-        tableViewController.tableView.dataSource = self
-        tableViewController.tableView.separatorStyle = .none
-        tableViewController.tableView.backgroundColor = UIColor.backGroundGrey()
-        tableViewController.tableView.register(SearchTableViewCell.self, forCellReuseIdentifier: "\(SearchTableViewCell.self)")
-        
-        return tableViewController
-    }()
-    
+//    private lazy var tableViewController: UITableViewController = {
+//        let tableViewController = UITableViewController()
+//        tableViewController.tableView.delegate = self
+//        tableViewController.tableView.dataSource = self
+//        tableViewController.tableView.separatorStyle = .none
+//        tableViewController.tableView.backgroundColor = UIColor.backGroundGrey()
+//        tableViewController.tableView.register(TableViewCell.self, forCellReuseIdentifier: "\(TableViewCell.self)")
+////
+//        return tableViewController
+//    }()
+//
 //    nav and search bar colors
     
     override func viewDidLoad() {
@@ -63,6 +65,8 @@ class QuestionsViewController: UIViewController {
         self.view.backgroundColor = UIColor.backGroundGrey()
         
         self.showBackgroundView()
+        
+    
     }
     
 // search function
@@ -82,7 +86,7 @@ class QuestionsViewController: UIViewController {
             }
             self.questionsInfo = qnsData
             self.filteredQuestionsInfo = qnsData
-            self.tableViewController.tableView.reloadData()
+//            self.tableViewController.tableView.reloadData()
         }
     }
     
@@ -127,13 +131,12 @@ extension QuestionsViewController : UITableViewDelegate, UITableViewDataSource {
      }
 
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let qnsCell = tableView.dequeueReusableCell(withIdentifier: "\(SearchTableViewCell.self)", for: indexPath) as! SearchTableViewCell
+        let Cell = tableView.dequeueReusableCell(withIdentifier: "\(TableViewCell.self)", for: indexPath) as! TableViewCell
         
-        qnsCell.configureView(with: filteredQuestionsInfo[indexPath.section])
+        Cell.configureView(with: filteredQuestionsInfo[indexPath.section])
         
-        return qnsCell
+        return Cell
     }
     
 }
@@ -144,9 +147,11 @@ extension QuestionsViewController : UITableViewDelegate, UITableViewDataSource {
 
 extension QuestionsViewController: UISearchBarDelegate, UISearchResultsUpdating {
     
+    
+    
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
-// check for user input
         guard let searchText = searchBar.text, !searchText.isEmpty else {
             return
         }
@@ -155,7 +160,8 @@ extension QuestionsViewController: UISearchBarDelegate, UISearchResultsUpdating 
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        self.hideBackgroundView()
+//        self.hideBackgroundView()
+
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -164,46 +170,44 @@ extension QuestionsViewController: UISearchBarDelegate, UISearchResultsUpdating 
         searchBar.endEditing(true)
         searchBar.resignFirstResponder()
         
-        self.showBackgroundView()
+//        self.showBackgroundView()
 //filtering using input string
         self.filteredQuestionsInfo = []
         
     }
     
-    
     func updateSearchResults(for searchController: UISearchController) {
-        
     }
     
 }
 
 
 extension QuestionsViewController {
-    
+
     func showBackgroundView() {
-        self.addChild(backgroundViewController)
+//        self.addChild(backgroundViewController)
         self.backgroundViewController.view.frame = view.bounds
         self.view.addSubview(backgroundViewController.view)
         self.view.bringSubviewToFront(backgroundViewController.view)
-        self.backgroundViewController.didMove(toParent: self)
+//        self.backgroundViewController.didMove(toParent: self)
     }
-    
-    func hideBackgroundView() {
-        //remove backgroundView
-        self.backgroundViewController.willMove(toParent: nil)
-        self.backgroundViewController.view.removeFromSuperview()
-        self.backgroundViewController.removeFromParent()
-        
-        //add table view
-        self.addChild(tableViewController)
-        self.tableViewController.view.frame = view.bounds
-        self.view.addSubview(tableViewController.view)
-        self.view.bringSubviewToFront(tableViewController.view)
-        self.tableViewController.didMove(toParent: self)
-        
-        //reload data
-        self.tableViewController.tableView.reloadData()
-    }
+
+//    func hideBackgroundView() {
+//        //remove backgroundView
+//        self.backgroundViewController.willMove(toParent: nil)
+//        self.backgroundViewController.view.removeFromSuperview()
+//        self.backgroundViewController.removeFromParent()
+//
+//        //add table view
+//        self.addChild(tableViewController)
+//        self.tableViewController.view.frame = view.bounds
+//        self.view.addSubview(tableViewController.view)
+//        self.view.bringSubviewToFront(tableViewController.view)
+//        self.tableViewController.didMove(toParent: self)
+//
+//        //reload data
+//        self.tableViewController.tableView.reloadData()
+//    }
 }
 
 extension QuestionsViewController {
@@ -224,6 +228,9 @@ extension QuestionsViewController {
     }
 }
 
+
+//func for displaying msg
+
 extension QuestionsViewController {
     func showErrorAlert(with title: String, message: String) {
         let offlineAlert = UIAlertController(title: title,
@@ -233,6 +240,8 @@ extension QuestionsViewController {
         self.present(offlineAlert, animated: true, completion: nil)
     }
 }
+
+
 
 extension UIColor {
     class func backGroundGrey() -> UIColor {
